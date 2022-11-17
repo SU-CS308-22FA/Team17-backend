@@ -29,7 +29,12 @@ function Header() {
                         <Nav className="ml-auto">
 
                             {userInfo ? (
-                                <NavDropdown title={userInfo.name} id='username'>
+                                <React.Fragment>
+                                    <LinkContainer to='/bloglist'>
+                                        <Navbar.Brand>Blogs</Navbar.Brand>
+                                    </LinkContainer>
+
+                                    <NavDropdown title={userInfo.name} id='username'>
                                     <LinkContainer to='/profile'>
                                         <NavDropdown.Item>Account Profile</NavDropdown.Item>
                                     </LinkContainer>
@@ -38,14 +43,22 @@ function Header() {
                                         <NavDropdown.Item>My Profile</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                                    <LinkContainer to='/my/blog'>
+                                        <NavDropdown.Item>My Blog Posts</NavDropdown.Item>
+                                    </LinkContainer>
 
+                                    <LinkContainer to='/createblog'>
+                                        <NavDropdown.Item>Create Blog</NavDropdown.Item>
+                                    </LinkContainer>
+                                    <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                 </NavDropdown>
+
+                                </React.Fragment>
+
                             ) : (
                                     <LinkContainer to='/login'>
                                         <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
                                     </LinkContainer>
-
                                 )}
 
 

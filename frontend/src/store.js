@@ -17,6 +17,10 @@ import {
     userMyListReducer,
 } from './reducers/profileReducers'
 
+import {
+    postCreateReducer, postMyListReducer,
+    postAllListReducer,
+} from './reducers/blogReducers'
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -30,6 +34,10 @@ const reducer = combineReducers({
     usermyDetails: userMyDetailsReducer,
     usermyUpdateProfile: userUpdateMyProfileReducer,
     usermyList: userMyListReducer,
+
+    postCreate:postCreateReducer,
+    postmyList:postMyListReducer,
+    postallList:postAllListReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?

@@ -1,0 +1,12 @@
+.card{
+    padding: 1.5em 1.5em .5em;
+    border-radius: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.PostInfo {
+    font-size: 6px;
+    color: rgb(39, 39, 39);
+}

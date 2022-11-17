@@ -9,7 +9,9 @@ import ProfileScreen from './screens/ProfileScreen'
 import UserListScreen from './screens/UserListScreen'
 import UserEditScreen from './screens/UserEditScreen'
 import MyProfileScreen from './screens/MyProfileScreen'
-
+import MyBlogScreen from './screens/MyBlogScreen'
+import BlogListScreen from './screens/BlogListScreen'
+import CreateBlogScreen from './screens/CreateBlogScreen'
 
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/my/profile' component={MyProfileScreen} />
+          <Route path='/my/blog' component={MyBlogScreen} />
+          <Route path='/createblog' component={CreateBlogScreen} />
+          <Route path='/bloglist' component={BlogListScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
         </Container>
