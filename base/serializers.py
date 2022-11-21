@@ -50,7 +50,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['name', 'website', 'body', 'published_on']
+        fields = ['_id','name', 'body', 'published_on']
 
 
 class CommentCreateSerializer(serializers.ModelSerializer):
@@ -58,7 +58,7 @@ class CommentCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['name', 'website', 'body', 'post', 'email']
+        fields = ['name', 'body', 'post', 'email']
 
 class CommentListSerializer(serializers.ModelSerializer):
     """DRF Serializer For Listing Comments"""
@@ -78,7 +78,7 @@ class CommentDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ['name', 'email', 'website', 'body',
+        fields = ['id','name', 'email', 'body',
                   'post_title', 'is_displayed', 'published_on']
 
 

@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 import { listAllPosts } from '../actions/blogActions'
 import Posts from '../components/Posts'
+import { Carousel } from 'react-bootstrap'
 
 
 function BlogListScreen({ history }) {
@@ -48,6 +49,7 @@ function BlogListScreen({ history }) {
             }
         </div>
     )
+
 }
 
 export default BlogListScreen

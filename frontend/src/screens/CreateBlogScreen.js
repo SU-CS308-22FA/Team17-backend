@@ -79,16 +79,6 @@ function CreateBlogScreen({ history }) {
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group controlId='name'>
-                        <Form.Label>published</Form.Label>
-                        <Form.Control
-                            type='boolean'
-                            placeholder='Confirm Password'
-                            value={published}
-                            onChange={(e) => setPublished(e.target.value)}
-                        >
-                        </Form.Control>
-                    </Form.Group>
 
                     <Button type='submit' variant='primary'>
                         Update

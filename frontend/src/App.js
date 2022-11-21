@@ -12,6 +12,7 @@ import MyProfileScreen from './screens/MyProfileScreen'
 import MyBlogScreen from './screens/MyBlogScreen'
 import BlogListScreen from './screens/BlogListScreen'
 import CreateBlogScreen from './screens/CreateBlogScreen'
+import BlogDetailScreen from './screens/BlogDetailScreen'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/my/blog' component={MyBlogScreen} />
           <Route path='/createblog' component={CreateBlogScreen} />
           <Route path='/bloglist' component={BlogListScreen} />
+          <Route path='/post/:slug' component={BlogDetailScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
         </Container>
