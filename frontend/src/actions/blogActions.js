@@ -138,3 +138,25 @@ export const listAllPosts = () => async (dispatch, getState) => {
         })
     }
 }
+
+
+export const PostDetails = (slug) => async (dispatch) => {
+    try {
+        dispatch({ type: POST_DETAILS_REQUEST })
+
+        const { data } = await axios.get(`/api/posts/view/${slug}`)
+
+        dispatch({
+            type: POST_DETAILS_SUCCESS,
+            payload: data
+        })
+
+    } catch (error) {
+        dispatch({
+            type: POST_DETAILS_FAIL,
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}

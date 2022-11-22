@@ -20,7 +20,14 @@ import {
 import {
     postCreateReducer, postMyListReducer,
     postAllListReducer,
+    postDetailsReducer,
 } from './reducers/blogReducers'
+
+import {
+    commentCreateReducer,
+    CommentAllList,
+} from './reducers/commentsReducers'
+
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -38,6 +45,10 @@ const reducer = combineReducers({
     postCreate:postCreateReducer,
     postmyList:postMyListReducer,
     postallList:postAllListReducer,
+    postdetails:postDetailsReducer,
+
+    postcomment :commentCreateReducer,
+    commentalllist:CommentAllList,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?

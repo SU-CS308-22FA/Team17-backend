@@ -82,3 +82,18 @@ export const postAllListReducer = (state = { Allposts: [] }, action) => {
     }
 }
 
+export const postDetailsReducer = (state = { post: { comments: [] } }, action) => {
+    switch (action.type) {
+        case POST_DETAILS_REQUEST:
+            return { loading: true, ...state }
+
+        case POST_DETAILS_SUCCESS:
+            return { loading: false, post: action.payload }
+
+        case POST_DETAILS_FAIL:
+            return { loading: false, error: action.payload }
+
+        default:
+            return state
+    }
+}
