@@ -12,6 +12,8 @@ import MyProfileScreen from './screens/MyProfileScreen'
 import MyBlogScreen from './screens/MyBlogScreen'
 import BlogListScreen from './screens/BlogListScreen'
 import CreateBlogScreen from './screens/CreateBlogScreen'
+import FanatikaScreen from './screens/FanatikaScreen'
+
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
+          <Route path='/fanatika' component={FanatikaScreen} />
           <Route path='/my/profile' component={MyProfileScreen} />
           <Route path='/my/blog' component={MyBlogScreen} />
           <Route path='/createblog' component={CreateBlogScreen} />
@@ -32,7 +35,7 @@ function App() {
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
         </Container>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
