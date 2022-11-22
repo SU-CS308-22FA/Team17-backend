@@ -33,7 +33,7 @@ function RegisterScreen({ location, history }) {
         e.preventDefault()
 
         if (password != confirmPassword) {
-            setMessage('Passwords do not match')
+            setMessage('Şifre Aynı Değil')
         } else {
             dispatch(register(name, email, team, password))
         }
@@ -42,18 +42,18 @@ function RegisterScreen({ location, history }) {
 
     return (
         <FormContainer>
-            <h1>Sign In</h1>
+            <h1>Kayıt Ol</h1>
             {message && <Message variant='danger'>{message}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
 
                 <Form.Group controlId='name'>
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>İsim</Form.Label>
                     <Form.Control
                         required
                         type='name'
-                        placeholder='Enter name'
+                        placeholder='İsim Gir'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     >
@@ -61,11 +61,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='email'>
-                    <Form.Label>Email Address</Form.Label>
+                    <Form.Label>Email Adresi</Form.Label>
                     <Form.Control
                         required
                         type='email'
-                        placeholder='Enter Email'
+                        placeholder='Email Gir'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     >
@@ -73,11 +73,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='team'>
-                    <Form.Label>Your Team</Form.Label>
+                    <Form.Label>Takım</Form.Label>
                     <Form.Control
                         required
                         type='team'
-                        placeholder='Enter team'
+                        placeholder='Takımını Gir'
                         value={team}
                         onChange={(e) => setTeam(e.target.value)}
                     >
@@ -85,11 +85,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>Şifre</Form.Label>
                     <Form.Control
                         required
                         type='password'
-                        placeholder='Enter Password'
+                        placeholder='Şifre Gir'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     >
@@ -97,11 +97,11 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Form.Group controlId='passwordConfirm'>
-                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Label>Şifre Onay</Form.Label>
                     <Form.Control
                         required
                         type='password'
-                        placeholder='Confirm Password'
+                        placeholder='Şifreni Tekrar Gir'
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     >
@@ -109,16 +109,16 @@ function RegisterScreen({ location, history }) {
                 </Form.Group>
 
                 <Button type='submit' variant='primary'>
-                    Register
+                    Kayıt Ol
                 </Button>
 
             </Form>
 
             <Row className='py-3'>
                 <Col>
-                    Have an Account? <Link
+                    Zaten Hesabın Var Mı? <Link
                         to={redirect ? `/login?redirect=${redirect}` : '/login'}>
-                        Sign In
+                        Giriş Yap
                         </Link>
                 </Col>
             </Row>

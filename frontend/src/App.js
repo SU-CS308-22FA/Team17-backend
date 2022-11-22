@@ -13,6 +13,7 @@ import MyBlogScreen from './screens/MyBlogScreen'
 import BlogListScreen from './screens/BlogListScreen'
 import CreateBlogScreen from './screens/CreateBlogScreen'
 import BlogDetailScreen from './screens/BlogDetailScreen'
+import FanatikaScreen from './screens/FanatikaScreen'
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
           <Route path='/post/:slug' component={BlogDetailScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
+          <Route path='/fanatika' component={FanatikaScreen} />
+
         </Container>
       </main>
       <Footer />

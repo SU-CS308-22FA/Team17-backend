@@ -56,9 +56,19 @@ function Header() {
                                 </React.Fragment>
 
                             ) : (
+                                <Container>
+
+                                <LinkContainer to='/fanatika'>
+                                    <Nav.Link><i className="fas fa-user"></i>Fanatika Nedir?</Nav.Link>
+                                </LinkContainer>
                                     <LinkContainer to='/login'>
-                                        <Nav.Link><i className="fas fa-user"></i>Login</Nav.Link>
+                                        <Nav.Link><i className="fas fa-user"></i>Giriş Yap</Nav.Link>
                                     </LinkContainer>
+                                    <LinkContainer to='/register'>
+                                        <Nav.Link><i className="fas fa-user"></i>Kayıt Ol</Nav.Link>
+                                    </LinkContainer>
+                                    
+                                </Container>
                                 )}
 
 

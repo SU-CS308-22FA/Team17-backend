@@ -31,16 +31,16 @@ function LoginScreen({ location, history }) {
 
     return (
         <FormContainer>
-            <h1>Sign In</h1>
+            <h1>Giriş Yap</h1>
             {error && <Message variant='danger'>{error}</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
 
                 <Form.Group controlId='email'>
-                    <Form.Label>Email Address</Form.Label>
+                    <Form.Label>Email Adresi</Form.Label>
                     <Form.Control
                         type='email'
-                        placeholder='Enter Email'
+                        placeholder=' Email Gir'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     >
@@ -49,10 +49,10 @@ function LoginScreen({ location, history }) {
 
 
                 <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label>Şifre</Form.Label>
                     <Form.Control
                         type='password'
-                        placeholder='Enter Password'
+                        placeholder='Şifreni Gir'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     >
@@ -60,15 +60,15 @@ function LoginScreen({ location, history }) {
                 </Form.Group>
 
                 <Button type='submit' variant='primary'>
-                    Sign In
+                    Giriş Yap
                 </Button>
             </Form>
 
             <Row className='py-3'>
                 <Col>
-                    New Customer? <Link
+                    Yeni Kullanıcı? <Link
                         to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-                        Register
+                        Kayıt Ol
                         </Link>
                 </Col>
             </Row>

@@ -43,7 +43,7 @@ function CreateBlogScreen({ history }) {
     }
     return (
             <Col md={20}>
-                <h2>Create Blog Profile</h2>
+                <h2>Blog Oluştur</h2>
 
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}
@@ -51,11 +51,11 @@ function CreateBlogScreen({ history }) {
                 <Form onSubmit={submitHandler}>
 
                     <Form.Group controlId='name' form-control-lg>
-                        <Form.Label>title</Form.Label>
+                        <Form.Label>Başlık</Form.Label>
                         <Form.Control
                             required
                             type='name'
-                            placeholder='title'
+                            placeholder='Başlık Ekle'
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                         >
@@ -63,16 +63,16 @@ function CreateBlogScreen({ history }) {
                     </Form.Group>
 
                     <Form.Group className="h-25" controlId="formHorizontalPassword">
-                        <Form.Label>Body</Form.Label>
-                        <textarea class="form-control" id="form4Example3" rows="4" required type='name' placeholder='Enter Body ' value={body} onChange={(e) => setBody(e.target.value)}></textarea>
+                        <Form.Label>Blog</Form.Label>
+                        <textarea class="form-control" id="form4Example3" rows="4" required type='name' placeholder='Blog Ekle ' value={body} onChange={(e) => setBody(e.target.value)}></textarea>
                     </Form.Group>
 
                     <Form.Group controlId='name'>
-                        <Form.Label>short_description</Form.Label>
+                        <Form.Label>Açıklama Ekle</Form.Label>
                         <Form.Control
 
                             type='name'
-                            placeholder='short_description'
+                            placeholder='Açıklama Ekle'
                             value={short}
                             onChange={(e) => setShort(e.target.value)}
                         >
@@ -81,7 +81,7 @@ function CreateBlogScreen({ history }) {
 
 
                     <Button type='submit' variant='primary'>
-                        Update
+                        Oluştur
                 </Button>
 
                 </Form>
