@@ -20,29 +20,29 @@ function Hakkımızda({ history }) {
 
     return (
         <div>
-            <h2 style= {{position:'absolute', left:500, top:180}}><a href="#" class="text-danger">BİZ KİMİZ?</a></h2>
+            <h2 style= {{position:'absolute', left:1100, top:180}}><a href="#" class="text-danger">BİZ KİMİZ?</a></h2>
 
-            <p style= {{position:'absolute', left:490, top:230}}>2022 - 2023 Güz Dönemi</p>
-            <p style= {{position:'absolute', left:500, top:250}}>CS 308 Öğrencileriyiz.</p>
+            <p style= {{position:'absolute', left:1090, top:230}}>2022 - 2023 Güz Dönemi</p>
+            <p style= {{position:'absolute', left:1100, top:250}}>CS 308 Öğrencileriyiz.</p>
 
-            <h4 style= {{position:'absolute', left:465, top:340}}><a href="#" class="text-info">Takım ÜYELERİMİZ</a></h4>
+            <h4 style= {{position:'absolute', left:1050, top:340}}><a href="#" class="text-info">Takım ÜYELERİMİZ</a></h4>
 
-            <p style= {{position:'absolute', left:530, top:380}}> Arda Göktaş</p>
-            <p style= {{position:'absolute', left:505, top:400}}> Melike Sena Özgen</p>
-            <p style= {{position:'absolute', left:490, top:420}}> Mustafa Sergen Haysal</p>
-            <p style= {{position:'absolute', left:535, top:440}}> Ufuk Atay</p>
+            <p style= {{position:'absolute', left:1130, top:380}}> Arda Göktaş</p>
+            <p style= {{position:'absolute', left:1100, top:400}}> Melike Sena Özgen</p>
+            <p style= {{position:'absolute', left:1080, top:420}}> Mustafa Sergen Haysal</p>
+            <p style= {{position:'absolute', left:1140, top:440}}> Ufuk Atay</p>
             
 
 
             
-            <img  style= {{position:'absolute', left:420, top:520}} src="TFF_logo.png" class="img-fluid" alt="..."></img>
+            <img  style= {{position:'absolute', left:1050, top:520}} src="./static/TFF_logo.png" class="img-fluid" alt="..."></img>
           
 
         
 
            
-            <h5 style= {{position:'absolute', left:275, top:880}} class="font-weight-bold"> <a href="#" class="text-warning"> Vİzyonumuz</a></h5>
-            <h5 style= {{position:'absolute', left:750, top:880}} class="font-weight-bold"> <a href="#" class="text-warning">Mİsyonumuz</a></h5>
+            <h5 style= {{position:'absolute', left:850, top:880}} class="font-weight-bold"> <a href="#" class="text-warning"> Vİzyonumuz</a></h5>
+            <h5 style= {{position:'absolute', left:1410, top:880}} class="font-weight-bold"> <a href="#" class="text-warning">Mİsyonumuz</a></h5>
 
             <div style= {{position:'absolute', top:930}} class="container text-center">
                     

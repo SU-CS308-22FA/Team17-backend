@@ -224,7 +224,7 @@ function FanatikaScreen({ history }) {
                         width: "900px",
                         height: "800px",}}
                         
-                        src="./logo.png" class="img-thumbnail" alt="..."></img>
+                        src="./static/logo.png" class="img-thumbnail" alt="..."></img>
               <img 
                         style={{position: "absolute",
                         left: 230,
@@ -232,7 +232,7 @@ function FanatikaScreen({ history }) {
                         width: "700px",
                         height: "700px",}}
                         
-                        src="./quiz.png" class="img-thumbnail" alt="..."></img>
+                        src="./static/quiz.png" class="img-thumbnail" alt="..."></img>
                 <img 
                         style={{position: "absolute",
                         right: 160,
@@ -240,7 +240,7 @@ function FanatikaScreen({ history }) {
                         width: "800px",
                         height: "700px",}}
                         
-                        src="./asd.png" class="img-thumbnail" alt="..."></img>
+                        src="./static/asd.png" class="img-thumbnail" alt="..."></img>
                 <img 
                         style={{position: "absolute",
                         left: 220,
@@ -248,7 +248,7 @@ function FanatikaScreen({ history }) {
                         width: "800px",
                         height: "700px",}}
                         
-                        src="./comment.png" class="img-thumbnail" alt="..."></img></>
+                        src="./static/comment.png" class="img-thumbnail" alt="..."></img></>
     )
 }
 

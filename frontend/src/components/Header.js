@@ -76,7 +76,7 @@ function Header() {
                                 </LinkContainer>
 
                                 <LinkContainer to='/FAQ'>
-                                        <Nav.Link><i className="fas fa-user"></i>Sık Sorulan Sorular</Nav.Link>
+                                        <Nav.Link><i className="fas fa-user"></i>FAQ</Nav.Link>
                                     </LinkContainer>
                                     <LinkContainer to='/login'>
                                         <Nav.Link><i className="fas fa-user"></i>Giriş Yap</Nav.Link>
