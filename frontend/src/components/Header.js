@@ -57,6 +57,13 @@ function Header() {
 
                             ) : (
                                 <Container>
+                                    <LinkContainer to='/gift'>
+                                        <Nav.Link><i className="fas fa-user"></i>Ödüller</Nav.Link>
+                                    </LinkContainer>
+
+                                    <LinkContainer to='/leaderboard'>
+                                        <Nav.Link><i className="fas fa-user"></i>Puan Tablosu</Nav.Link>
+                                    </LinkContainer>
 
                                 <LinkContainer to='/fanatika'>
                                     <Nav.Link><i className="fas fa-user"></i>Fanatika Nedir?</Nav.Link>

@@ -8,24 +8,9 @@ import Paginate from '../components/Paginate'
 
 
 function FanatikaScreen({ history }) {
-    const dispatch = useDispatch()
-    const productList = useSelector(state => state)
-    const { error, loading, page, pages } = productList
-
-    let keyword = history.location.search
-
-    useEffect(() => {
-
-    }, [dispatch, keyword])
-
     return (
-        <div>
-            {loading ? <Loader />
-                : error ? <Message variant='danger'>{error}</Message>
-                    :
-                    <div>
-                        <Row>
-                        <h2
+    <>
+            <h2
                 style={{
                   fontWeight: "regular",
                   fontSize: "25px",
@@ -263,12 +248,7 @@ function FanatikaScreen({ history }) {
                         width: "800px",
                         height: "700px",}}
                         
-                        src="./comment.png" class="img-thumbnail" alt="..."></img>
-                        </Row>
-                        <Paginate page={page} pages={pages} keyword={keyword} />
-                    </div>
-            }
-        </div>
+                        src="./comment.png" class="img-thumbnail" alt="..."></img></>
     )
 }
 

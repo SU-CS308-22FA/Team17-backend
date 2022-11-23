@@ -14,6 +14,8 @@ import BlogListScreen from './screens/BlogListScreen'
 import CreateBlogScreen from './screens/CreateBlogScreen'
 import BlogDetailScreen from './screens/BlogDetailScreen'
 import FanatikaScreen from './screens/FanatikaScreen'
+import GiftScreen from './screens/GiftScreen'
+import Leaderboard from './screens/Leaderboard'
 
 
 function App() {
@@ -34,7 +36,8 @@ function App() {
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
           <Route path='/fanatika' component={FanatikaScreen} />
-
+          <Route path='/leaderboard' component={Leaderboard}/>
+          <Route path='/gift' component={GiftScreen}/>
         </Container>
       </main>
       <Footer />
