@@ -57,6 +57,12 @@ function Header() {
 
                             ) : (
                                 <Container>
+
+                                    
+                                    <LinkContainer to='/about'>
+                                        <Nav.Link><i className="fas fa-user"></i>Hakkımızda</Nav.Link>
+                                    </LinkContainer>
+
                                     <LinkContainer to='/gift'>
                                         <Nav.Link><i className="fas fa-user"></i>Ödüller</Nav.Link>
                                     </LinkContainer>
@@ -68,6 +74,10 @@ function Header() {
                                 <LinkContainer to='/fanatika'>
                                     <Nav.Link><i className="fas fa-user"></i>Fanatika Nedir?</Nav.Link>
                                 </LinkContainer>
+
+                                <LinkContainer to='/FAQ'>
+                                        <Nav.Link><i className="fas fa-user"></i>Sık Sorulan Sorular</Nav.Link>
+                                    </LinkContainer>
                                     <LinkContainer to='/login'>
                                         <Nav.Link><i className="fas fa-user"></i>Giriş Yap</Nav.Link>
                                     </LinkContainer>

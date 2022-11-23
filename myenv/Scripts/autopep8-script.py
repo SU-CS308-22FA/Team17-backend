@@ -1,4 +1,4 @@
-#!C:\Users\Dell\Documents\GitHub\Team17-backend\myenv\Scripts\python.exe
+#!C:\Users\lenovo\OneDrive\Belgeler\GitHub\Team17-backend\myenv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'autopep8==1.5.4','console_scripts','autopep8'
 import re
 import sys

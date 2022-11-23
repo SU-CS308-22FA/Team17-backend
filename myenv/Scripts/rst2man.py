@@ -1,4 +1,4 @@
-#!C:\Users\Dell\Documents\GitHub\Team17-backend\myenv\Scripts\python.exe
+#!C:\Users\lenovo\OneDrive\Belgeler\GitHub\Team17-backend\myenv\Scripts\python.exe
 
 # Author: 
 # Contact: grubert@users.sf.net

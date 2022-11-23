@@ -1,4 +1,4 @@
-#!C:\Users\Dell\Documents\GitHub\Team17-backend\myenv\Scripts\python.exe
+#!C:\Users\lenovo\OneDrive\Belgeler\GitHub\Team17-backend\myenv\Scripts\python.exe
 # -*- coding: utf8 -*-
 # :Copyright: © 2015 Günter Milde.
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:

@@ -16,6 +16,8 @@ import BlogDetailScreen from './screens/BlogDetailScreen'
 import FanatikaScreen from './screens/FanatikaScreen'
 import GiftScreen from './screens/GiftScreen'
 import Leaderboard from './screens/Leaderboard'
+import Hakkımızda from './screens/Hakkımızda'
+import Sıksorulanlar from './screens/Sıksorulanlar'
 
 
 function App() {
@@ -38,6 +40,9 @@ function App() {
           <Route path='/fanatika' component={FanatikaScreen} />
           <Route path='/leaderboard' component={Leaderboard}/>
           <Route path='/gift' component={GiftScreen}/>
+          <Route path='/FAQ' component={Sıksorulanlar} />
+          <Route path='/about' component={Hakkımızda} />
+
         </Container>
       </main>
       <Footer />

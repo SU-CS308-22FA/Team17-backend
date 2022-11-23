@@ -1,4 +1,4 @@
-#!C:\Users\Dell\Documents\GitHub\Team17-backend\myenv\Scripts\python.exe
+#!C:\Users\lenovo\OneDrive\Belgeler\GitHub\Team17-backend\myenv\Scripts\python.exe
 
 # $Id: rst2odt.py 5839 2009-01-07 19:09:28Z dkuhlman $
 # Author: Dave Kuhlman <dkuhlman@rexx.com>
