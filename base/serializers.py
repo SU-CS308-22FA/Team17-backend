@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
-from base.models import Profile, Post, Comment
+from base.models import Profile, Post, Comment, Question, Answer, Quiz
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -132,3 +132,55 @@ class PostUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('title', 'body', 'short_description')
+
+class QuizSerializer(serializers.ModelSerializer):
+    questions = serializers.HyperlinkedRelatedField(
+    many=True,
+    read_only=True,
+    view_name='base:question-detail'
+    )
+
+    def getFullname(self, obj):
+        return obj.author.first_name + ' ' + obj.author.last_name
+
+    def getQuestionCount(self, obj):
+        return obj.question_count
+
+    author_fullname = serializers.SerializerMethodField("getFullname")
+    question_count = serializers.SerializerMethodField("getQuestionCount")
+
+    class Meta:
+        fields = [
+            'id',
+            'title',
+            'author',
+            'author_fullname',
+            'question_count',
+            'created_at',
+            'questions'
+        ]
+        model = Quiz
+
+class AnswerSerializer(serializers.ModelSerializer):
+	class Meta:
+		fields = [
+			'id',
+			'text',
+			'correct',
+		]
+		model = Answer
+
+class QuestionSerializer(serializers.ModelSerializer):
+	answers = AnswerSerializer(
+		read_only=True,
+		many=True
+	)
+
+	class Meta:
+		fields = [
+			'id',
+			'quiz',
+			'prompt',
+			'answers'
+		]
+		model = Question

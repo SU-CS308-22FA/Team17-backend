@@ -20,6 +20,7 @@ function BlogListScreen({ history }) {
     const userLogin = useSelector(state => state.userLogin)
     const { userInfo } = userLogin
 
+
     useEffect(() => {
         if (!userInfo ) {
             history.push('/login')

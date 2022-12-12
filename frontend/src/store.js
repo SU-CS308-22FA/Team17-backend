@@ -28,6 +28,19 @@ import {
     CommentAllList,
 } from './reducers/commentsReducers'
 
+import {
+    CategoryCreateReducer,
+    categoryListReducer,
+    categoryDeleteReducer,
+    categoryDetailsReducer,
+    questionDeleteReducer,
+    PromptCreateReducer,
+    AnswerListReducer,
+    answerDeleteReducer,
+    answerCreateReducer,
+
+} from './reducers/quizReducers'
+
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -49,6 +62,16 @@ const reducer = combineReducers({
 
     postcomment :commentCreateReducer,
     commentalllist:CommentAllList,
+
+    categorycreate:CategoryCreateReducer,
+    categoryList:categoryListReducer,
+    categoryDelete:categoryDeleteReducer,
+    categoryDetail:categoryDetailsReducer,
+    questionDelete:questionDeleteReducer,
+    questionCreate:PromptCreateReducer,
+    answerList:AnswerListReducer,
+    answerDelete:answerDeleteReducer,
+    answerCreate:answerCreateReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?

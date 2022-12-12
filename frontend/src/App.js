@@ -18,6 +18,10 @@ import GiftScreen from './screens/GiftScreen'
 import Leaderboard from './screens/Leaderboard'
 import Hakkımızda from './screens/Hakkımızda'
 import Sıksorulanlar from './screens/Sıksorulanlar'
+import AddCategory from './screens/AddCategory'
+import CategoryListScreen from './screens/CategoryList'
+import QuizAddScreen from './screens/QuizAddScreen'
+import AnswerList from './screens/AnswerList'
 
 
 function App() {
@@ -34,9 +38,13 @@ function App() {
           <Route path='/my/blog' component={MyBlogScreen} />
           <Route path='/createblog' component={CreateBlogScreen} />
           <Route path='/bloglist' component={BlogListScreen} />
+          <Route path='/categorylist' component={CategoryListScreen} />
           <Route path='/post/:slug' component={BlogDetailScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
+          <Route path='/admin/addCategory' component={AddCategory} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
+          <Route path='/answer/list/:id/edit' component={AnswerList} />
+          <Route path='/category/list/:id/edit' component={QuizAddScreen} />
           <Route path='/fanatika' component={FanatikaScreen} />
           <Route path='/leaderboard' component={Leaderboard}/>
           <Route path='/gift' component={GiftScreen}/>

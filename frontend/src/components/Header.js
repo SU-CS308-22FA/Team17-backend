@@ -31,6 +31,10 @@ function Header() {
                             {userInfo ? (
                                 <React.Fragment>
                                     <LinkContainer to='/bloglist'>
+                                        <Navbar.Brand>Live Chat</Navbar.Brand>
+                                    </LinkContainer>
+
+                                    <LinkContainer to='/bloglist'>
                                         <Navbar.Brand>Blogs</Navbar.Brand>
                                     </LinkContainer>
 
@@ -58,7 +62,7 @@ function Header() {
                             ) : (
                                 <Container>
 
-                                    
+
                                     <LinkContainer to='/about'>
                                         <Nav.Link><i className="fas fa-user"></i>Hakkımızda</Nav.Link>
                                     </LinkContainer>
@@ -84,18 +88,30 @@ function Header() {
                                     <LinkContainer to='/register'>
                                         <Nav.Link><i className="fas fa-user"></i>Kayıt Ol</Nav.Link>
                                     </LinkContainer>
-                                    
+
                                 </Container>
                                 )}
 
 
                             {userInfo && userInfo.isAdmin && (
-                                <NavDropdown title='Admin' id='adminmenue'>
-                                    <LinkContainer to='/admin/userlist'>
-                                        <NavDropdown.Item>Users</NavDropdown.Item>
+                                <React.Fragment>
+                                    <NavDropdown title='Admin' id='adminmenue'>
+                                        <LinkContainer to='/admin/userlist'>
+                                            <NavDropdown.Item>Users</NavDropdown.Item>
+                                        </LinkContainer>
+                                        <LinkContainer to='/admin/addCategory'>
+                                            <NavDropdown.Item>Add Category</NavDropdown.Item>
+                                        </LinkContainer>
+
+                                    </NavDropdown>
+
+                                    <LinkContainer to='/categorylist'>
+                                        <Navbar.Brand>Categories</Navbar.Brand>
                                     </LinkContainer>
 
-                                </NavDropdown>
+
+                                </React.Fragment>
+
                             )}
 
                         </Nav>
