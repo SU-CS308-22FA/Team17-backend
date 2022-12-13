@@ -22,6 +22,9 @@ import AddCategory from './screens/AddCategory'
 import CategoryListScreen from './screens/CategoryList'
 import QuizAddScreen from './screens/QuizAddScreen'
 import AnswerList from './screens/AnswerList'
+import QuizCategory from './screens/QuizCategory'
+import QuizAttemptScreen from './screens/QuizAttemptScreen'
+import ResultPage from './screens/ResultPage'
 
 
 function App() {
@@ -39,6 +42,9 @@ function App() {
           <Route path='/createblog' component={CreateBlogScreen} />
           <Route path='/bloglist' component={BlogListScreen} />
           <Route path='/categorylist' component={CategoryListScreen} />
+          <Route path='/quizlist' component={QuizCategory} />
+          <Route path='/resultpage/:id/:point/:arr' component={ResultPage} />
+          <Route path='/attemptquiz/:id' component={QuizAttemptScreen} />
           <Route path='/post/:slug' component={BlogDetailScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/addCategory' component={AddCategory} />

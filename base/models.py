@@ -12,7 +12,7 @@ class Profile(models.Model):
     team = models.TextField(max_length=500, blank=True)
     bio = models.TextField(max_length=500, blank=True)
     birth_date = models.DateField(null=True, blank=True)
-    rating = models.CharField(max_length=30, blank=True)
+    rating = models.IntegerField(default=0, editable=True)
 
     def __str__(self):
         return self.user
