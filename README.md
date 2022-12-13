@@ -32,13 +32,13 @@
 
              1-) While the user or admin is logging out, some pages are stuck but logged out. 
              
-             2-) The application gives a score of one less than the correct answers of the user in the quiz. When there are              3 correct answers, it counts 2 correct and gives 2 points.
+             2-) The application gives a score of one less than the correct answers of the user in the quiz. When there are 3 correct answers, it counts 2 correct and gives 2 points.
              
 1.5.1 How to obtain the source code?
 
-      Front-end and Back-end codes are kept on the same repositories. When we open the code part, there are 2 different           folders,front-end and back-end. 
+      Front-end and Back-end codes are kept on the same repositories. When we open the code part, there are 2 different folders,front-end and back-end. 
       
-      Source codes are in them. You can enter the front-end and back-end files via the terminal with the cd command and           perform the necessary operations.
+      Source codes are in them. You can enter the front-end and back-end files via the terminal with the cd command and perform the necessary operations.
 
 1.5.2   The layout of the directory structure. 
 
@@ -57,7 +57,7 @@
          
          2-) For the back-end, the files in the backend folder are used. 
          
-         In this section there is setting.py. In this .py, the location of the database and the APIs we open in the back-            end are kept there. Static files are routed from this section.
+         In this section there is setting.py. In this .py, the location of the database and the APIs we open in the back-end are kept there. Static files are routed from this section.
          
          Authetication parts are provided from this part.
          
