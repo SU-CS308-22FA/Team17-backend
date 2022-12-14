@@ -55,10 +55,6 @@ function Header() {
                                         <NavDropdown.Item>Create Blog</NavDropdown.Item>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/adminPrizeAdd'>
-                                        <NavDropdown.Item>Prize Add</NavDropdown.Item>
-                                    </LinkContainer>
-
                                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                 </NavDropdown>
 
@@ -87,6 +83,11 @@ function Header() {
                                 <LinkContainer to='/FAQ'>
                                         <Nav.Link><i className="fas fa-user"></i>FAQ</Nav.Link>
                                     </LinkContainer>
+
+                                    <LinkContainer to='/PrizeWinner'>
+                                        <Nav.Link><i className="fas fa-user"></i>Ödül Kazananar</Nav.Link>
+                                    </LinkContainer>
+
                                     <LinkContainer to='/login'>
                                         <Nav.Link><i className="fas fa-user"></i>Giriş Yap</Nav.Link>
                                     </LinkContainer>
@@ -94,9 +95,6 @@ function Header() {
                                         <Nav.Link><i className="fas fa-user"></i>Kayıt Ol</Nav.Link>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/PrizeWinner'>
-                                        <Nav.Link><i className="fas fa-user"></i>Ödül Kazananar</Nav.Link>
-                                    </LinkContainer>
 
                                 </Container>
                                 )}
@@ -110,6 +108,10 @@ function Header() {
                                         </LinkContainer>
                                         <LinkContainer to='/admin/addCategory'>
                                             <NavDropdown.Item>Add Category</NavDropdown.Item>
+                                        </LinkContainer>
+
+                                        <LinkContainer to='/adminPrizeAdd'>
+                                            <NavDropdown.Item>Prize Add</NavDropdown.Item>
                                         </LinkContainer>
 
                                     </NavDropdown>

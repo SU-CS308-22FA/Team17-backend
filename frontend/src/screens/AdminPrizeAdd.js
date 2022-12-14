@@ -19,7 +19,7 @@ function AdminPrizeAdd({ location, history }) {
     const { error, loading, userInfo } = userLogin
 
     useEffect(() => {
-        if (userInfo) {
+        if (!userInfo) {
             history.push(redirect)
         }
     }, [history, userInfo, redirect])
@@ -58,19 +58,19 @@ function AdminPrizeAdd({ location, history }) {
                         <div class="form-check">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked/>
                         <label class="form-check-label" for="gridRadios1">
-                            Birinci Olan Kullanıcı için 
+                            Birinci Olan Kullanıcı için
                         </label>
                         </div>
                         <div class="form-check">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"/>
                         <label class="form-check-label" for="gridRadios2">
-                            İkinci Olan Kullanıcı için 
+                            İkinci Olan Kullanıcı için
                         </label>
                         </div>
                         <div class="form-check">
                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3"/>
                         <label class="form-check-label" for="gridRadios3">
-                            Üçüncü Olan Kullanıcı için 
+                            Üçüncü Olan Kullanıcı için
                         </label>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ function AdminPrizeAdd({ location, history }) {
                     </div>
 
                 </form>
-                
+
 
                 <Button type='submit' variant='primary'>
                     Ödülü ekle
