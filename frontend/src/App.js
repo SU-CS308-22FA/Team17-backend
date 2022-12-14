@@ -25,7 +25,8 @@ import AnswerList from './screens/AnswerList'
 import QuizCategory from './screens/QuizCategory'
 import QuizAttemptScreen from './screens/QuizAttemptScreen'
 import ResultPage from './screens/ResultPage'
-
+import AdminPrizeAdd from './screens/AdminPrizeAdd'
+import PrizeWinner from './screens/PrizeWinner'
 
 function App() {
   return (
@@ -56,6 +57,8 @@ function App() {
           <Route path='/gift' component={GiftScreen}/>
           <Route path='/FAQ' component={Sıksorulanlar} />
           <Route path='/about' component={Hakkımızda} />
+          <Route path='/adminPrizeAdd' component={AdminPrizeAdd} />
+          <Route path='/PrizeWinner' component={PrizeWinner} />
 
         </Container>
       </main>

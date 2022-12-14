@@ -54,6 +54,11 @@ function Header() {
                                     <LinkContainer to='/createblog'>
                                         <NavDropdown.Item>Create Blog</NavDropdown.Item>
                                     </LinkContainer>
+
+                                    <LinkContainer to='/adminPrizeAdd'>
+                                        <NavDropdown.Item>Prize Add</NavDropdown.Item>
+                                    </LinkContainer>
+
                                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                 </NavDropdown>
 
@@ -87,6 +92,10 @@ function Header() {
                                     </LinkContainer>
                                     <LinkContainer to='/register'>
                                         <Nav.Link><i className="fas fa-user"></i>Kayıt Ol</Nav.Link>
+                                    </LinkContainer>
+
+                                    <LinkContainer to='/PrizeWinner'>
+                                        <Nav.Link><i className="fas fa-user"></i>Ödül Kazananar</Nav.Link>
                                     </LinkContainer>
 
                                 </Container>

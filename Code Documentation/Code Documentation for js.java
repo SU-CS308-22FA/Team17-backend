@@ -101,3 +101,9 @@ export const createCategory = (author,title) => async (dispatch, getState) => {
         })
     } //If an error is received, an error message is returned from the backend
 }
+
+
+// #### @author Melike Sena Özgen
+// #### @version 3.11
+// #### @since 14.12.2022
+
