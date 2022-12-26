@@ -30,6 +30,14 @@ function Header() {
 
                             {userInfo ? (
                                 <React.Fragment>
+                                    <LinkContainer to='/playerratings'>
+                                        <Navbar.Brand>Player Ratings</Navbar.Brand>
+                                    </LinkContainer>
+
+                                    <LinkContainer to='/teamstatistics'>
+                                        <Navbar.Brand>Team Statistics</Navbar.Brand>
+                                    </LinkContainer>
+
                                     <LinkContainer to='/quizlist'>
                                         <Navbar.Brand>Quizzes</Navbar.Brand>
                                     </LinkContainer>

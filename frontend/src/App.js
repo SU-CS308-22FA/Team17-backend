@@ -27,6 +27,8 @@ import QuizAttemptScreen from './screens/QuizAttemptScreen'
 import ResultPage from './screens/ResultPage'
 import AdminPrizeAdd from './screens/AdminPrizeAdd'
 import PrizeWinner from './screens/PrizeWinner'
+import PlayerRatings from './screens/PlayerRatings'
+import TeamStatistics from './screens/TeamStatistics'
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           <Route path='/login' component={LoginScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
+          <Route path='/playerratings' component={PlayerRatings} />
+          <Route path='/teamstatistics' component={TeamStatistics} />
           <Route path='/my/profile' component={MyProfileScreen} />
           <Route path='/my/blog' component={MyBlogScreen} />
           <Route path='/createblog' component={CreateBlogScreen} />

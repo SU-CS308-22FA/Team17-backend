@@ -41,6 +41,11 @@ import {
 
 } from './reducers/quizReducers'
 
+import {
+    StatisticsGsList,
+    ratingsGsList,
+} from './reducers/galatasarayReducers'
+
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -72,6 +77,8 @@ const reducer = combineReducers({
     answerList:AnswerListReducer,
     answerDelete:answerDeleteReducer,
     answerCreate:answerCreateReducer,
+    statisticsgslist:StatisticsGsList,
+    ratingsgslist:ratingsGsList,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?
