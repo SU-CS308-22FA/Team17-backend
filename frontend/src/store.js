@@ -57,6 +57,10 @@ import {
     PlayerUpdateReducer,
 } from './reducers/playerReducers'
 
+import {
+    WinnerListReducer,
+} from './reducers/generalReducers'
+
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -83,18 +87,25 @@ const reducer = combineReducers({
     categoryList:categoryListReducer,
     categoryDelete:categoryDeleteReducer,
     categoryDetail:categoryDetailsReducer,
+
     questionDelete:questionDeleteReducer,
     questionCreate:PromptCreateReducer,
+
     answerList:AnswerListReducer,
     answerDelete:answerDeleteReducer,
     answerCreate:answerCreateReducer,
+
     statisticsgslist:StatisticsGsList,
     ratingsgslist:ratingsGsList,
+
     statisticsfblist:StatisticsFbList,
     ratingsfblist:ratingsFbList,
+
     playercreatereducer:PlayerCreateReducer,
     playeralllist:PlayerAllList,
     platerupdatereducer:PlayerUpdateReducer,
+
+    winnerlistreducer:WinnerListReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?

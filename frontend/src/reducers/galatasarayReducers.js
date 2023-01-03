@@ -29,7 +29,7 @@ export const StatisticsGsList = (state = { Statisticsgs: [] }, action) => {
     }
 }
 
-export const ratingsGsList = (state = { Ratingsgs: [] }, action) => {
+export const ratingsGsList = (state = { Ratingsgs: {} }, action) => {
     switch (action.type) {
         case GSRATINGS_DETAILS_REQUEST:
             return { loading: true }
@@ -41,7 +41,7 @@ export const ratingsGsList = (state = { Ratingsgs: [] }, action) => {
             return { loading: false, error: action.payload }
 
         case GSRATINGS_DETAILS_RESET:
-            return { Ratingsgs: [] }
+            return { Ratingsgs: {} }
 
         default:
             return state

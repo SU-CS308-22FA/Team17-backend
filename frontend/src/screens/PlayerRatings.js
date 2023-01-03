@@ -38,7 +38,7 @@ function PlayerRatings({ history }) {
 
     }, [dispatch, history, userInfo])
 
-
+    const ratinggs = Ratingsgs
 
     return (
         <div>
@@ -63,8 +63,8 @@ function PlayerRatings({ history }) {
                                     </thead>
 
                                     <tbody>
-                                        {Ratingsgs["topPlayers"]?.rating.map(item => (
-                                            <tr key={item}>
+                                        {Ratingsgs?.topPlayers?.rating.map((item,index) => (
+                                            <tr key={index}>
                                                 <td>{item["statistics"]?.rating}</td>
                                                 <td>{item["player"]?.name}</td>
                                             </tr>
@@ -86,7 +86,7 @@ function PlayerRatings({ history }) {
                                     </thead>
 
                                     <tbody>
-                                        {Ratingsfb["topPlayers"]?.rating && Ratingsfb["topPlayers"]?.rating.map(item => (
+                                        {Ratingsfb?.topPlayers.rating && Ratingsfb["topPlayers"]?.rating.map(item => (
                                             <tr key={item}>
                                                 <td>{item["statistics"]?.rating}</td>
                                                 <td>{item["player"]?.name}</td>

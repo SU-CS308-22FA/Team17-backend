@@ -62,55 +62,55 @@ function TeamStatistics({ history }) {
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total assists</td>
-                                    <td>{Statisticsgs["statistics"]?.assists}</td>
+                                    <td>{Statisticsgs?.statistics?.assists}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total goal</td>
-                                    <td>{Statisticsgs["statistics"]?.goalsScored}</td>
+                                    <td>{Statisticsgs?.statistics?.goalsScored}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total successfulDribbles</td>
-                                    <td>{Statisticsgs["statistics"]?.successfulDribbles}</td>
+                                    <td>{Statisticsgs?.statistics?.successfulDribbles}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total yellowCardsAgainst</td>
-                                    <td>{Statisticsgs["statistics"]?.yellowCardsAgainst}</td>
+                                    <td>{Statisticsgs?.statistics?.yellowCardsAgainst}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total redCards</td>
-                                    <td>{Statisticsgs["statistics"]?.redCards}</td>
+                                    <td>{Statisticsgs?.statistics?.redCards}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total yellowCards</td>
-                                    <td>{Statisticsgs["statistics"]?.yellowCards}</td>
+                                    <td>{Statisticsgs?.statistics?.yellowCards}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total PassesAgainst</td>
-                                    <td>{Statisticsgs["statistics"]?.totalPassesAgainst}</td>
+                                    <td>{Statisticsgs?.statistics?.totalPassesAgainst}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total shotsFromOutsideTheBoxAgainst</td>
-                                    <td>{Statisticsgs["statistics"]?.shotsFromOutsideTheBoxAgainst}</td>
+                                    <td>{Statisticsgs?.statistics?.shotsFromOutsideTheBoxAgainst}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total FinalThirdPassesAgainst</td>
-                                    <td>{Statisticsgs["statistics"]?.totalFinalThirdPassesAgainst}</td>
+                                    <td>{Statisticsgs?.statistics?.totalFinalThirdPassesAgainst}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total shotsOnTarget</td>
-                                    <td>{Statisticsgs["statistics"]?.shotsOnTarget}</td>
+                                    <td>{Statisticsgs?.statistics?.shotsOnTarget}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total corners</td>
-                                    <td>{Statisticsgs["statistics"]?.corners}</td>
+                                    <td>{Statisticsgs?.statistics?.corners}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total freeKickShots</td>
-                                    <td>{Statisticsgs["statistics"]?.freeKickShots}</td>
+                                    <td>{Statisticsgs?.statistics?.freeKickShots}</td>
                                 </tr>
                                 <tr>
                                     <td>Galatasaray total freeKickGoals</td>
-                                    <td>{Statisticsgs["statistics"]?.freeKickGoals}</td>
+                                    <td>{Statisticsgs?.statistics?.freeKickGoals}</td>
                                 </tr>
                                 </Table>
 
@@ -127,55 +127,55 @@ function TeamStatistics({ history }) {
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total assists</td>
-                                            <td>{Statisticsfb["statistics"]?.assists}</td>
+                                            <td>{Statisticsfb?.statistics?.assists}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total goal</td>
-                                            <td>{Statisticsfb["statistics"]?.goalsScored}</td>
+                                            <td>{Statisticsfb?.statistics?.goalsScored}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total successfulDribbles</td>
-                                            <td>{Statisticsfb["statistics"]?.successfulDribbles}</td>
+                                            <td>{Statisticsfb?.statistics?.successfulDribbles}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total yellowCardsAgainst</td>
-                                            <td>{Statisticsfb["statistics"]?.yellowCardsAgainst}</td>
+                                            <td>{Statisticsfb?.statistics?.yellowCardsAgainst}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total redCards</td>
-                                            <td>{Statisticsfb["statistics"]?.redCards}</td>
+                                            <td>{Statisticsfb?.statistics?.redCards}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total yellowCards</td>
-                                            <td>{Statisticsfb["statistics"]?.yellowCards}</td>
+                                            <td>{Statisticsfb?.statistics?.yellowCards}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total PassesAgainst</td>
-                                            <td>{Statisticsfb["statistics"]?.totalPassesAgainst}</td>
+                                            <td>{Statisticsfb?.statistics?.totalPassesAgainst}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total shotsFromOutsideTheBoxAgainst</td>
-                                            <td>{Statisticsfb["statistics"]?.shotsFromOutsideTheBoxAgainst}</td>
+                                            <td>{Statisticsfb?.statistics?.shotsFromOutsideTheBoxAgainst}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total FinalThirdPassesAgainst</td>
-                                            <td>{Statisticsfb["statistics"]?.totalFinalThirdPassesAgainst}</td>
+                                            <td>{Statisticsfb?.statistics?.totalFinalThirdPassesAgainst}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total shotsOnTarget</td>
-                                            <td>{Statisticsfb["statistics"]?.shotsOnTarget}</td>
+                                            <td>{Statisticsfb?.statistics?.shotsOnTarget}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total corners</td>
-                                            <td>{Statisticsfb["statistics"]?.corners}</td>
+                                            <td>{Statisticsfb?.statistics?.corners}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total freeKickShots</td>
-                                            <td>{Statisticsfb["statistics"]?.freeKickShots}</td>
+                                            <td>{Statisticsfb?.statistics?.freeKickShots}</td>
                                         </tr>
                                         <tr>
                                             <td>fenerbahce total freeKickGoals</td>
-                                            <td>{Statisticsfb["statistics"]?.freeKickGoals}</td>
+                                            <td>{Statisticsfb?.statistics?.freeKickGoals}</td>
                                         </tr>
                                     </Table>
                                 </div>
