@@ -1,54 +1,136 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import {Table } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import Loader from '../components/Loader'
+import Message from '../components/Message'
+import FormContainer from '../components/FormContainer'
+import { listPrizes } from '../actions/prizeActions'
+import { login } from '../actions/userActions'
+function GiftScreen({ location,history }) {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const dispatch = useDispatch()
+    const redirect = location.search ? location.search.split('=')[1] : '/profile'
+
+    const prizealllist = useSelector(state => state.prizealllist)
+    const { error:error1, loading:loading1, prizeAll } = prizealllist
+
+    const userLogin = useSelector(state => state.userLogin)
+    const { error, loading, userInfo } = userLogin
+
+    useEffect(() => {
+        if (userInfo) {
+            history.push(redirect)
+        }
+        else{
+            dispatch(listPrizes())
+        }
 
 
-function GiftScreen({ history }) {
+    }, [history, userInfo, dispatch,redirect])
+
+
+
+
+
     return (
         <div>
-        <div>
-            <div>
-            <h1 style={{color: "grey",}}><center>ÖDÜLLER</center></h1>
-            <br></br>
-            <h3 style={{color: "red",textAlign: "center",}}>
-                Quiz ve Tahmin oyunu sonucunda her ay sonunda en çok puanı toplayan ilk üç kişiye verilecek ödüller aşağıdaki gibidir.
-            </h3>
-            <br></br>
-            <h4>
-                <p style={{textAlign: "center",}}>
-                1.ye Tuttuğu Takımın Lisanslı Forması
-                </p>
-                <br></br>
-                <img src = "./static/forma.png"  alt="..."></img>
-            </h4>
-            </div>
-            <br></br>
-        </div>
-        <div>
-            <div>
-            <h4>
-                <p style={{textAlign: "center",}} >
-                2.ye Orijinal Spor Toto Süper Lig Futbol Topu 
-                </p>
-                <img src = "./static/top.png"  alt="..."></img>
-            </h4>
-            </div>
-            <div>
-            <br></br>
-            </div>
-        </div>
-        <div>
-            <div>
-            <h4>
-                <p>
-                3.ye Tuttuğu Takımın Ambleminin Olduğu Lisanslı Kupa
-                </p>
-                <img src = "./static/kupa.png"  alt="..."></img>
-            </h4>
-            </div>
-            <div>
-            </div>
-        </div>
-        </div>
+        {loading1 && loading
+            ? (<Loader />)
+            : error
+                ? (<Message variant='danger'>{error}</Message>)
+                : (
+                    <div>
+                        <Table striped bordered hover responsive className='table-sm'>
+                            <thead>
+                                <tr>
+                                    <th>Prizes for Galatasaray winners</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {prizeAll?.map((prize,index) =>(
+                                    prize.prize_team === "galatasaray" ?(
+                                    <tr key={index}>
+                                        <td>{prize.prize_name}</td>
+                                        <td>{prize.prize_content}</td>
+                                        <td>{prize.winner_ladder}</td>
+                                    </tr>):null
+                                ))}
+                            </tbody>
+                        </Table>
+                    </div>
+                )}
+                <div>
+                    <Table striped bordered hover responsive className='table-sm'>
+                        <thead>
+                            <tr>
+                                <th>Prize Winners for Fenerbahce winners</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        {prizeAll?.map((prize,index) =>(
+                                    prize.prize_team === "fenerbahce" ?(
+                                    <tr key={index}>
+                                        <td>{prize.prize_name}</td>
+                                        <td>{prize.prize_content}</td>
+                                        <td>{prize.winner_ladder}</td>
+                                    </tr>):null
+                                ))}
+                        </tbody>
+                    </Table>
+                </div>
+
+                <div>
+                    <Table striped bordered hover responsive className='table-sm'>
+                        <thead>
+                            <tr>
+                                <th>Prize Winners for Besiktas winners</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        {prizeAll?.map((prize,index) =>(
+                                    prize.prize_team === "besiktas" ?(
+                                    <tr key={index}>
+                                        <td>{prize.prize_name}</td>
+                                        <td>{prize.prize_content}</td>
+                                        <td>{prize.winner_ladder}</td>
+                                    </tr>):null
+                                ))}
+                        </tbody>
+                    </Table>
+                </div>
+
+                <div>
+                    <Table striped bordered hover responsive className='table-sm'>
+                        <thead>
+                            <tr>
+                                <th>Prize Winners for Trabzonspor winners</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        {prizeAll?.map((prize,index) =>(
+                                    prize.prize_team === "trabzonspor" ?(
+                                    <tr key={index}>
+                                        <td>{prize.prize_name}</td>
+                                        <td>{prize.prize_content}</td>
+                                        <td>{prize.winner_ladder}</td>
+                                    </tr>):null
+                                ))}
+                        </tbody>
+                    </Table>
+                </div>
+    </div>
+
+
+
+
     )
 }
-
 export default GiftScreen

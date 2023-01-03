@@ -143,4 +143,14 @@ class Player(models.Model):
         return self.player
 
 
+class Prize(models.Model):
+    prize_name = models.TextField(max_length=500, blank=False)
+    prize_content = models.TextField(max_length=500, blank=False)
+    prize_team = models.TextField(max_length=500, blank=False)
+    winner_ladder = models.TextField(max_length=500, blank=False)
+
+    def __str__(self):
+        return self.prize_name
+
+
 

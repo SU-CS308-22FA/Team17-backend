@@ -44,7 +44,7 @@ function AddPlayer({ history }) {
 
     return (
         <Col md={20}>
-        <h2>Category Oluştur</h2>
+        <h2>Oyuncu Oluştur</h2>
 
         {message && <Message variant='danger'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}

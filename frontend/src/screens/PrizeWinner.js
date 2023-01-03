@@ -6,6 +6,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 import FormContainer from '../components/FormContainer'
 import { listWinners } from '../actions/generalActions'
+import { listPrizes } from '../actions/prizeActions'
 import { login } from '../actions/userActions'
 
 function PrizeWinner({ location, history }) {

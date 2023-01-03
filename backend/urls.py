@@ -39,6 +39,7 @@ urlpatterns = [
     path('api/users/my/', include('base.urls.profile_urls')),
     path('api/posts/', include('base.urls.post_urls')),
     path('api/comments/', include('base.urls.comment_urls')),
+    path('api/prize/', include('base.urls.prize_urls')),
     path('api/player/', include('base.urls.player_urls')),
     url(r'^api/v2/', include((router.urls, 'base'), namespace='base')),
     #url('api/quiz',include(base.urls.quiz_urls,namespace="base")),

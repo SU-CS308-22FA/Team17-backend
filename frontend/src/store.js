@@ -61,6 +61,11 @@ import {
     WinnerListReducer,
 } from './reducers/generalReducers'
 
+import {
+    PrizeCreateReducer,
+    PrizeAllList,
+} from './reducers/prizeReducers'
+
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -106,6 +111,8 @@ const reducer = combineReducers({
     platerupdatereducer:PlayerUpdateReducer,
 
     winnerlistreducer:WinnerListReducer,
+    prizecreate:PrizeCreateReducer,
+    prizealllist:PrizeAllList,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?
