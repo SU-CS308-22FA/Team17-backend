@@ -46,6 +46,17 @@ import {
     ratingsGsList,
 } from './reducers/galatasarayReducers'
 
+import {
+    StatisticsFbList,
+    ratingsFbList,
+} from './reducers/fenerbahceReducers'
+
+import {
+    PlayerCreateReducer,
+    PlayerAllList,
+    PlayerUpdateReducer,
+} from './reducers/playerReducers'
+
 
 const reducer = combineReducers({
     userLogin: userLoginReducer,
@@ -79,6 +90,11 @@ const reducer = combineReducers({
     answerCreate:answerCreateReducer,
     statisticsgslist:StatisticsGsList,
     ratingsgslist:ratingsGsList,
+    statisticsfblist:StatisticsFbList,
+    ratingsfblist:ratingsFbList,
+    playercreatereducer:PlayerCreateReducer,
+    playeralllist:PlayerAllList,
+    platerupdatereducer:PlayerUpdateReducer,
 })
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?

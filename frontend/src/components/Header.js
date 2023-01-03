@@ -30,6 +30,10 @@ function Header() {
 
                             {userInfo ? (
                                 <React.Fragment>
+                                    <LinkContainer to='/playerlist'>
+                                        <Navbar.Brand>Player Scores </Navbar.Brand>
+                                    </LinkContainer>
+
                                     <LinkContainer to='/playerratings'>
                                         <Navbar.Brand>Player Ratings</Navbar.Brand>
                                     </LinkContainer>
@@ -63,6 +67,10 @@ function Header() {
                                         <NavDropdown.Item>Create Blog</NavDropdown.Item>
                                     </LinkContainer>
 
+                                    <LinkContainer to='/scoreplayer'>
+                                        <NavDropdown.Item>Score Player</NavDropdown.Item>
+                                    </LinkContainer>
+
                                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                                 </NavDropdown>
 
@@ -84,11 +92,11 @@ function Header() {
                                         <Nav.Link><i className="fas fa-user"></i>Puan Tablosu</Nav.Link>
                                     </LinkContainer>
 
-                                <LinkContainer to='/fanatika'>
-                                    <Nav.Link><i className="fas fa-user"></i>Fanatika Nedir?</Nav.Link>
-                                </LinkContainer>
+                                    <LinkContainer to='/fanatika'>
+                                        <Nav.Link><i className="fas fa-user"></i>Fanatika Nedir?</Nav.Link>
+                                    </LinkContainer>
 
-                                <LinkContainer to='/FAQ'>
+                                    <LinkContainer to='/FAQ'>
                                         <Nav.Link><i className="fas fa-user"></i>FAQ</Nav.Link>
                                     </LinkContainer>
 
@@ -99,6 +107,7 @@ function Header() {
                                     <LinkContainer to='/login'>
                                         <Nav.Link><i className="fas fa-user"></i>Giriş Yap</Nav.Link>
                                     </LinkContainer>
+
                                     <LinkContainer to='/register'>
                                         <Nav.Link><i className="fas fa-user"></i>Kayıt Ol</Nav.Link>
                                     </LinkContainer>
@@ -114,8 +123,13 @@ function Header() {
                                         <LinkContainer to='/admin/userlist'>
                                             <NavDropdown.Item>Users</NavDropdown.Item>
                                         </LinkContainer>
+
                                         <LinkContainer to='/admin/addCategory'>
                                             <NavDropdown.Item>Add Category</NavDropdown.Item>
+                                        </LinkContainer>
+
+                                        <LinkContainer to='/admin/addPlayer'>
+                                            <NavDropdown.Item>Add Player</NavDropdown.Item>
                                         </LinkContainer>
 
                                         <LinkContainer to='/adminPrizeAdd'>

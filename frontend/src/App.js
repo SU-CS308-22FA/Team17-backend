@@ -29,6 +29,9 @@ import AdminPrizeAdd from './screens/AdminPrizeAdd'
 import PrizeWinner from './screens/PrizeWinner'
 import PlayerRatings from './screens/PlayerRatings'
 import TeamStatistics from './screens/TeamStatistics'
+import AddPlayer from './screens/AddPlayer'
+import AllPlayer from './screens/AllPlayer'
+import ScorePlayer from './screens/ScorePlayer'
 
 function App() {
   return (
@@ -45,7 +48,9 @@ function App() {
           <Route path='/my/profile' component={MyProfileScreen} />
           <Route path='/my/blog' component={MyBlogScreen} />
           <Route path='/createblog' component={CreateBlogScreen} />
+          <Route path='/scoreplayer' component={ScorePlayer} />
           <Route path='/bloglist' component={BlogListScreen} />
+          <Route path='/playerlist' component={AllPlayer} />
           <Route path='/categorylist' component={CategoryListScreen} />
           <Route path='/quizlist' component={QuizCategory} />
           <Route path='/resultpage/:id/:point/:arr' component={ResultPage} />
@@ -53,6 +58,7 @@ function App() {
           <Route path='/post/:slug' component={BlogDetailScreen} />
           <Route path='/admin/userlist' component={UserListScreen} />
           <Route path='/admin/addCategory' component={AddCategory} />
+          <Route path='/admin/addPlayer' component={AddPlayer} />
           <Route path='/admin/user/:id/edit' component={UserEditScreen} />
           <Route path='/answer/list/:id/edit' component={AnswerList} />
           <Route path='/category/list/:id/edit' component={QuizAddScreen} />

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
-from base.models import Profile, Post, Comment, Question, Answer, Quiz
+from base.models import Profile, Post, Comment, Question, Answer, Quiz,Player
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -184,3 +184,11 @@ class QuestionSerializer(serializers.ModelSerializer):
 			'answers'
 		]
 		model = Question
+
+
+class PlayerCreateSerializers(serializers.ModelSerializer):
+    """DRF Serializer For Creating player By The User"""
+
+    class Meta:
+        model = Player
+        fields = ("__all__")

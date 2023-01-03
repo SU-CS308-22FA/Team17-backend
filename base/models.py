@@ -134,5 +134,13 @@ class Answer(models.Model):
 	def __str__(self):
 		return self.text
 
+class Player(models.Model):
+    player = models.TextField(max_length=500, blank=False)
+    team_player = models.TextField(max_length=500, blank=False)
+    score = models.IntegerField(default=0, editable=True)
+
+    def __str__(self):
+        return self.player
+
 
 

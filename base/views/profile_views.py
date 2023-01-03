@@ -20,3 +20,7 @@ class ProfileOwnerDetailApiView(RetrieveUpdateAPIView):
 
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
+
+class ListAllUsers(ListCreateAPIView):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileOwnerSerializer
