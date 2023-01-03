@@ -7,11 +7,12 @@ import Message from '../components/Message'
 import { createPlayer } from '../actions/playerActions'
 import {PLAYER_CREATE_RESET} from '../constants/playerConstants'
 
-function AddPlayer({ history }) {
+function AddPlayer({ location,history }) {
 
     const [playerteam, setPlayeerTeam] = useState('')
     const [playername, setplayer] = useState('')
 
+    const redirect = location.search ? location.search.split('=')[1] : '/login'
 
     const [message, setMessage] = useState('')
 
@@ -24,12 +25,17 @@ function AddPlayer({ history }) {
     const { userInfo } = userLogin
 
     useEffect(() => {
+
+        if (!userInfo && !userInfo?.isAdmin) {
+            history.push(redirect)
+        }
+
         if (success) {
             setPlayeerTeam("")
             setplayer("")
             dispatch({ type: PLAYER_CREATE_RESET })
         }
-    }, [history, success,dispatch])
+    }, [history, success,dispatch,redirect])
 
     const submitHandler = (e) => {
         e.preventDefault()
