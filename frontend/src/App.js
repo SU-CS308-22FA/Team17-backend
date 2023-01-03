@@ -32,6 +32,7 @@ import TeamStatistics from './screens/TeamStatistics'
 import AddPlayer from './screens/AddPlayer'
 import AllPlayer from './screens/AllPlayer'
 import ScorePlayer from './screens/ScorePlayer'
+import ProfilePage from './screens/ProfilePage'
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path='/about' component={Hakkımızda} />
           <Route path='/adminPrizeAdd' component={AdminPrizeAdd} />
           <Route path='/PrizeWinner' component={PrizeWinner} />
+          <Route path='/profilepage' component={ProfilePage} />
 
         </Container>
       </main>

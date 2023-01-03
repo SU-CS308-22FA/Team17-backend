@@ -7,8 +7,6 @@ import Paginate from './Paginate'
 import { Link } from 'react-router-dom'
 
 
-
-
 function HomeScreen({ history }) {
     const dispatch = useDispatch()
     const productList = useSelector(state => state)
@@ -22,7 +20,7 @@ function HomeScreen({ history }) {
 
     return (
         <div>
-            
+
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     :
@@ -41,10 +39,10 @@ function HomeScreen({ history }) {
                         }}
                         >
                         Hem Takımını Destekle, Hem Ödülleri Kap
-                        <br /> 
+                        <br />
                         Futbolu Takip Ederken, Eğlen
                         </h2>
-                        
+
                         <Link to="/fanatika">
                         <button style={{position: "absolute",
                         right: 450,
@@ -88,39 +86,39 @@ function HomeScreen({ history }) {
                         }}
                         >
                         Bu Ay Olan Ödüllerİ
-                        <br /> 
+                        <br />
                         Sıralamanın Nasıl Olduğunu Merak Ediyorsan
                         </h2>
-                        
-                        
-                        
 
-                        <img 
+
+
+
+                        <img
                         style={{position: "absolute",
                         left: 500,
                         top: 1200,
                         width: "1350px",
                         height: "500px",}}
-                        
+
                         src="./static/71179.png" class="img-thumbnail" alt="..."></img>
-                        <img 
+                        <img
                         style={{position: "absolute",
                         left: 250,
                         top: 250,
                         width: "1000px",
                         height: "700px",}}
-                        
+
                         src="./static/bacground.png" class="img-thumbnail" alt="..."></img>
-                        
+
                         <Paginate page={page} pages={pages} keyword={keyword} />
-                        
-                        
+
+
                     </div>
-                    
-                    
+
+
             }
         </div>
-        
+
     )
 }
 

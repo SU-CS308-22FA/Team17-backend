@@ -128,7 +128,7 @@ function Header() {
                                             <NavDropdown.Item>Add Category</NavDropdown.Item>
                                         </LinkContainer>
 
-                                        <LinkContainer to='/admin/addPlayer'>
+                                        <LinkContainer id='addPlayer' to='/admin/addPlayer'>
                                             <NavDropdown.Item>Add Player</NavDropdown.Item>
                                         </LinkContainer>
 

@@ -57,7 +57,7 @@ function AddPlayer({ location,history }) {
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
 
-            <Form.Group controlId='name' form-control-lg>
+            <Form.Group controlId='hello' form-control-lg>
                 <Form.Label>Oyuncu İsmi</Form.Label>
                 <Form.Control
                     required

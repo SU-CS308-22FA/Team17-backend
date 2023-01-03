@@ -13,7 +13,7 @@ function LoginScreen({ location, history }) {
 
     const dispatch = useDispatch()
 
-    const redirect = location.search ? location.search.split('=')[1] : '/profile'
+    const redirect = location.search ? location.search.split('=')[1] : '/profilepage'
 
     const userLogin = useSelector(state => state.userLogin)
     const { error, loading, userInfo } = userLogin
@@ -59,7 +59,7 @@ function LoginScreen({ location, history }) {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary'>
+                <Button type='submit' variant='primary' >
                     Giriş Yap
                 </Button>
             </Form>
