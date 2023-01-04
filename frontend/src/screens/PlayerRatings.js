@@ -54,7 +54,7 @@ function PlayerRatings({ history }) {
                                 return (
                                 <div>
                                     <h1>Overall Player Ratings for {Myuser?.team}</h1>
-                                    <Table striped bordered hover responsive className='table-sm'>
+                                    <Table striped bordered hover responsive className='table-sm' id= 'table2'>
                                     <thead>
                                         <tr>
                                             <th>Rating</th>
@@ -77,7 +77,7 @@ function PlayerRatings({ history }) {
                                 return (
                                 <div>
                                     <h1>Overall Player Ratings for {Myuser?.team}</h1>
-                                    <Table striped bordered hover responsive className='table-sm'>
+                                    <Table striped bordered hover responsive className='table-sm' id= 'table2'>
                                     <thead>
                                         <tr>
                                             <th>Rating</th>
@@ -86,7 +86,7 @@ function PlayerRatings({ history }) {
                                     </thead>
 
                                     <tbody>
-                                        {Ratingsfb?.topPlayers.rating && Ratingsfb["topPlayers"]?.rating.map(item => (
+                                        {Ratingsfb?.topPlayers?.rating && Ratingsfb["topPlayers"]?.rating.map(item => (
                                             <tr key={item}>
                                                 <td>{item["statistics"]?.rating}</td>
                                                 <td>{item["player"]?.name}</td>

@@ -34,11 +34,11 @@ function Header() {
                                         <Navbar.Brand>Player Scores </Navbar.Brand>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/playerratings'>
+                                    <LinkContainer to='/playerratings' id='playerrat'>
                                         <Navbar.Brand>Player Ratings</Navbar.Brand>
                                     </LinkContainer>
 
-                                    <LinkContainer to='/teamstatistics'>
+                                    <LinkContainer to='/teamstatistics' id='teamstats'>
                                         <Navbar.Brand>Team Statistics</Navbar.Brand>
                                     </LinkContainer>
 
