@@ -59,13 +59,12 @@ function PrizeWinner({ location, history }) {
                             </thead>
 
                             <tbody>
-                                {winners?.sort((first,second) => second.rating - first.rating).slice(0,3).map((winner,index) =>(
+                                {winners?.sort((first,second) => second.rating - first.rating).map((winner,index) =>(
                                     winner.team === "galatasaray" ?(
                                     <tr key={index}>
                                         <td>{winner["user"].name}</td>
                                         <td>{winner.team}</td>
                                         <td>{winner.rating}</td>
-                                        <td>kupa</td>
                                     </tr>):null
                                 ))}
                             </tbody>
@@ -87,7 +86,6 @@ function PrizeWinner({ location, history }) {
                                     <td>{winner["user"].name}</td>
                                     <td>{winner.team}</td>
                                     <td>{winner.rating}</td>
-                                    <td>kupa</td>
                                 </tr>):null
                             ))}
                         </tbody>
@@ -109,7 +107,6 @@ function PrizeWinner({ location, history }) {
                                     <td>{winner["user"].name}</td>
                                     <td>{winner.team}</td>
                                     <td>{winner.rating}</td>
-                                    <td>kupa</td>
                                 </tr>):null
                             ))}
                         </tbody>
@@ -131,7 +128,6 @@ function PrizeWinner({ location, history }) {
                                     <td>{winner["user"].name}</td>
                                     <td>{winner.team}</td>
                                     <td>{winner.rating}</td>
-                                    <td>kupa</td>
                                 </tr>):null
                             ))}
                         </tbody>
