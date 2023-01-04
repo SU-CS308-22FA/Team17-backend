@@ -1,58 +1,85 @@
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import {Table } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import Loader from '../components/Loader'
+import Message from '../components/Message'
+import FormContainer from '../components/FormContainer'
+import { listWinners } from '../actions/generalActions'
+import { listPrizes } from '../actions/prizeActions'
+import { login } from '../actions/userActions'
 
+function Leaderboard({ location,history }) {
 
-function Leaderboard({ history }) {
+    const gsprizearr=[]
+    const fbprizearr=[]
+    const tsprizearr=[]
+    const bjkprizearr=[]
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const dispatch = useDispatch()
+
+    const redirect = location.search ? location.search.split('=')[1] : '/profile'
+
+    const winnerlistreducer = useSelector(state => state.winnerlistreducer)
+    const { error:error1, loading:loading1, winners } = winnerlistreducer
+
+    const userLogin = useSelector(state => state.userLogin)
+    const { error, loading, userInfo } = userLogin
+
+    useEffect(() => {
+        if (userInfo) {
+            history.push(redirect)
+        }
+        else{
+            dispatch(listWinners())
+        }
+
+    }, [history, userInfo, dispatch,redirect])
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+        dispatch(login(email, password))
+    }
     return (
-        
-        <><h1><center>KASIM AYI PUAN TABLOSU</center></h1>
-        <br></br>
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Kullanıcı Adı</th>
-                    <th scope="col">Tuttuğu Takım</th>
-                    <th scope="col">Puan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>ardagoktas</td>
-                    <td>Galatasaray</td>
-                    <td>37</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>melike_bjk</td>
-                    <td>Beşiktaş</td>
-                    <td>34</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>sergeningo</td>
-                    <td>Ümraniyespor</td>
-                    <td>29</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>ufukatay</td>
-                    <td>Galatasaray</td>
-                    <td>29</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>irmakcoban</td>
-                    <td>Adana Demirspor</td>
-                    <td>26</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>enner_valencia</td>
-                    <td>Fenerbahçe</td>
-                    <td>23</td>
-                </tr>
-            </tbody>
-        </table></>
+        <div>
+            <h1>Kasım ayı score tablosu</h1>
+        {loading1 && loading
+            ? (<Loader />)
+            : error
+                ? (<Message variant='danger'>{error}</Message>)
+                : (
+                    <div>
+                        <Table striped bordered hover responsive className='table table-dark'>
+                            <thead>
+                                <tr>
+                                    <th>Isim</th>
+                                    <th>Takım</th>
+                                    <th>Puan</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {winners?.sort((first,second) => second.rating - first.rating).map((winner,index) =>(
+                                    <tr key={index}>
+                                        <td>{winner["user"].name}</td>
+                                        <td>{winner.team}</td>
+                                        <td>{winner.rating}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </Table>
+                    </div>
+                )}
+
+
+
+    </div>
+
+
+
     )
 }
 export default Leaderboard

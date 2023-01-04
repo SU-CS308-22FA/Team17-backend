@@ -77,7 +77,7 @@ function ProfilePage({ history }) {
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Galatasaray</td>
+                    <td>Ankaragücü</td>
                     <td>Nef Stadium</td>
                 </tr>
                 <tr>
@@ -154,7 +154,7 @@ function ProfilePage({ history }) {
                                     </tr>
                                     <tr>
                                         <th scope="row">3</th>
-                                        <td>RizeSpor Stadium</td>
+                                        <td>Rizespor</td>
                                         <td>Şükrü Saracoğlu Stadium</td>
                                     </tr>
                                     <tr>
